@@ -6,7 +6,7 @@ public class Ejemplo1_Runnable  implements Runnable{
 	Thread t;
 	public Ejemplo1_Runnable() {
 		super();
-		t=new Thread(this,"Nuevo hilo");
+		this.t=new Thread(this,"Nuevo hilo");
 		System.out.println("Creado hilo "+t);
 		t.start();
 	}
