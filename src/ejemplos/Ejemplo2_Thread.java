@@ -1,6 +1,6 @@
 package ejemplos;
 
-public class EjemploThread extends Thread{
+public class Ejemplo2_Thread extends Thread{
 
 	@Override
 	public void run() {

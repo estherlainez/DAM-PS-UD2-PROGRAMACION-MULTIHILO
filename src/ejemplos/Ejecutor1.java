@@ -1,6 +1,6 @@
 package ejemplos;
 
-public class Ejecutor {
+public class Ejecutor1 {
 
 	public static void main(String[] args) {
 		System.out.println("Hilo principal");
