@@ -8,7 +8,7 @@ public class EjecucionFibonacciThread {
 		System.out.println("Inicio");
 		System.out.println("Introduce numero");
 		int numero=teclado.nextInt();
-		FibonacciThread fibo=new FibonacciThread();
+		FibonacciThread fibo=new FibonacciThread(numero);
 		fibo.start();
 		System.out.println("Fin");
 		

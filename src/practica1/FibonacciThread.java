@@ -3,6 +3,11 @@ package practica1;
 public class FibonacciThread extends Thread {
 	int numero;
 	
+	FibonacciThread(int numero){
+		super();
+		this.numero=numero;
+	}
+	
 	@Override
 	public void run() {
 		super.run();

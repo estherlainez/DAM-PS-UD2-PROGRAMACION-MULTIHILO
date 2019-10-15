@@ -7,15 +7,15 @@ public class EjecucionFibonaciRunnable {
 		Scanner teclado=new Scanner(System.in);
 		System.out.println("Introduce un numero");
 		int numero1=teclado.nextInt();
-		//System.out.println("Introduce otro numero");
-		//int numero2=teclado.nextInt();
+		System.out.println("Introduce otro numero");
+		int numero2=teclado.nextInt();
 		//System.out.println("Introduce otro numero");
 		//int numero3=teclado.nextInt();
 		FibonacciRunnable f= new FibonacciRunnable(numero1);
-		//Fibonacci1 g= new Fibonacci1(numero2);
+		FibonacciRunnable g= new FibonacciRunnable(numero2);
 		//Fibonacci1 h= new Fibonacci1(numero3);
 		
-		System.out.println("Proceso terminado");
+		System.out.println("Su serie de numeros...");
 
 	}
 
