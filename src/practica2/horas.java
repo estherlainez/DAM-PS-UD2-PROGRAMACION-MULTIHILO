@@ -2,6 +2,7 @@ package practica2;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.time.LocalTime;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -47,6 +48,7 @@ public class horas extends JFrame {
 		JLabel lblHoras = new JLabel("Horas");
 		lblHoras.setBounds(166, 111, 89, 49);
 		contentPane.add(lblHoras);
+		lblHoras.setText(LocalTime.now().toString());
 		
 	}
 }
