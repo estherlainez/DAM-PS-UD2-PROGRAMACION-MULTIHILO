@@ -10,9 +10,10 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 
-public class horas extends JFrame {
+public class Horas extends JFrame implements Runnable{
 
 	private JPanel contentPane;
+	
 
 	/**
 	 * Launch the application.
@@ -21,8 +22,9 @@ public class horas extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					horas frame = new horas();
+					Horas frame = new Horas();
 					frame.setVisible(true);
+					new Horas();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -33,7 +35,12 @@ public class horas extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public horas() {
+	Thread t;
+	public Horas() {
+		
+		super();
+		this.t=new Thread(this,"Hilo horas");
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -50,5 +57,23 @@ public class horas extends JFrame {
 		contentPane.add(lblHoras);
 		lblHoras.setText(LocalTime.now().toString());
 		
+		t.start();
+		
+		
+	}
+
+	
+	
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		LocalTime.now().toString();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
