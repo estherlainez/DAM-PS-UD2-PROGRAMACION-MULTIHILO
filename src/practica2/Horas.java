@@ -25,6 +25,7 @@ public class Horas extends JFrame implements Runnable{
 					Horas frame = new Horas();
 					frame.setVisible(true);
 					new Horas();
+				
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -35,11 +36,12 @@ public class Horas extends JFrame implements Runnable{
 	/**
 	 * Create the frame.
 	 */
-	Thread t;
+	JLabel lblHoras =null;
+	Thread hilo;
 	public Horas() {
 		
 		super();
-		this.t=new Thread(this,"Hilo horas");
+		this.hilo=new Thread(this,"Hilo horas");
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -48,27 +50,22 @@ public class Horas extends JFrame implements Runnable{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("Parar");
 		btnNewButton.setBounds(166, 227, 89, 23);
 		contentPane.add(btnNewButton);
 		
-		JLabel lblHoras = new JLabel("Horas");
+		lblHoras = new JLabel("Horas");
 		lblHoras.setBounds(166, 111, 89, 49);
 		contentPane.add(lblHoras);
-		lblHoras.setText(LocalTime.now().toString());
-		
-		t.start();
-		
+		//lblHoras.setText(LocalTime.now().toString());	
+		hilo.start();
 		
 	}
 
-	
-	
-	
+		
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		LocalTime.now().toString();
+		lblHoras.setText(LocalTime.now().toString());
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {

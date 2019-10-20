@@ -7,7 +7,6 @@ public class Ejercicio1 {
 		Tic a=new Tic();
 		Tac b=new Tac();
 		a.start();
-		
 		b.start();
 
 	}
