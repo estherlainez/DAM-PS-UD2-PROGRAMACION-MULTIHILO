@@ -12,12 +12,12 @@ public class ejercicio4 {
 			Clase_Ejercicio1 hiloPrincipal=new Clase_Ejercicio1("Hilo",numero);
 			hiloPrincipal.start();
 			hiloPrincipal.join();
-			Thread hijo=new Thread(familia,hiloPrincipal,"Primogenito");
-			hijo.start();
-			hijo.join();
-			Thread hijo2=new Thread(familia,hijo,"HijoDe_");
-			hijo2.start();
-			Thread hijo3=new Thread(familia,hijo,"HijoDe_HijoDe");
+			Thread hilo1=new Thread(familia,hiloPrincipal,"Primogenito");
+			hilo1.start();
+			hilo1.join();
+			Thread hilo2=new Thread(familia,hilo1,"HijoDe_");
+			hilo2.start();
+			Thread hijo3=new Thread(familia,hilo1,"HijoDe_HijoDe");
 			hijo3.start();
 
 		} catch (InterruptedException e) {
