@@ -5,13 +5,14 @@ public class Tic extends Thread{
 	public void run() {
 		super.run();
 		while(true) {
+			System.out.println("Tic");
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				
 				e.printStackTrace();
 			}
-			System.out.println("Tic");
+			
 			
 		}
 		
